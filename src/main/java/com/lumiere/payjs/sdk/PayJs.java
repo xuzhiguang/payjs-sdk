@@ -20,7 +20,7 @@ import java.util.concurrent.TimeUnit;
 @Slf4j
 public class PayJs {
 
-    private MediaType MediaTypeJson = MediaType.parse("application/json; charset=utf-8");
+    private final MediaType MediaTypeJson = MediaType.parse("application/json; charset=utf-8");
 
     /**
      * 域名
@@ -52,8 +52,7 @@ public class PayJs {
         this.key = key;
     }
 
-    public PayJs(MediaType mediaTypeJson, String mchid, String key, long connectTimeout, long readTimeout) {
-        MediaTypeJson = mediaTypeJson;
+    public PayJs(String mchid, String key, long connectTimeout, long readTimeout) {
         this.mchid = mchid;
         this.key = key;
         this.connectTimeout = connectTimeout;
@@ -62,6 +61,7 @@ public class PayJs {
 
     /**
      * 获取回调数据
+     * 官方文档<a>https://help.payjs.cn/api-lie-biao/jiao-yi-xin-xi-tui-song.html</a>
      * @param response 回调数据
      * @return 回调数据
      * @throws PayJsException 异常
@@ -78,6 +78,7 @@ public class PayJs {
 
     /**
      * 退款
+     * 官方文档<a>https://help.payjs.cn/api-lie-biao/tui-kuan.html</a>
      * @param request 请求数据
      * @return 返回数据
      * @throws PayJsException 异常
@@ -91,6 +92,7 @@ public class PayJs {
 
     /**
      * 获取jsapi所需参数
+     * 官方文档<a>https://help.payjs.cn/api-lie-biao/jsapiyuan-sheng-zhi-fu.html</a>
      * @param request 请求数据
      * @return 返回数据
      * @throws PayJsException 异常
@@ -104,6 +106,7 @@ public class PayJs {
 
     /**
      * 收银台支付
+     * 官方文档<a>https://help.payjs.cn/api-lie-biao/shou-yin-tai-zhi-fu.html</a>
      * @param request 请求数据
      * @return 返回URL地址，需要前端跳转
      */
@@ -130,6 +133,7 @@ public class PayJs {
 
     /**
      * 关闭订单
+     * 官方文档<a>https://help.payjs.cn/api-lie-biao/guan-bi-ding-dan.html</a>
      * @param request 请求数据
      * @return 返回数据
      * @throws PayJsException 异常
@@ -142,7 +146,8 @@ public class PayJs {
     }
 
     /**
-     * 检查订单
+     * 订单查询
+     * 官方文档<a>https://help.payjs.cn/api-lie-biao/ding-dan-cha-xun.html</a>
      * @param request 请求数据
      * @return 返回数据
      * @throws PayJsException 异常
