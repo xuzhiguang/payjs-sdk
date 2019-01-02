@@ -36,7 +36,9 @@ public class SignUtil {
         Collections.sort(keysList);
 
         StringBuilder stringBuilder = new StringBuilder();
-        keysList.forEach(item -> stringBuilder.append(item + "=" + jsonObject.get(item) + "&"));
+        keysList.forEach(item -> {
+                stringBuilder.append(item + "=" + jsonObject.get(item) + "&");
+        });
         stringBuilder.append("key=" + key);
 
         return DigestUtils.md5Hex(stringBuilder.toString()).toUpperCase();

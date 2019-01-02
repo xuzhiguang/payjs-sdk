@@ -62,12 +62,11 @@ public class PayJs {
 
     /**
      * 获取回调数据
-     * @param body 字符串
+     * @param response 回调数据
      * @return 回调数据
      * @throws PayJsException 异常
      */
-    public NotifyResponse notify(String body) throws PayJsException {
-        NotifyResponse response = JSON.parseObject(body, NotifyResponse.class);
+    public NotifyResponse notify(NotifyResponse response) throws PayJsException {
         String sign = response.getSign();
         response.setSign(null);
         String sign1 = SignUtil.getSign(response, this.key);
