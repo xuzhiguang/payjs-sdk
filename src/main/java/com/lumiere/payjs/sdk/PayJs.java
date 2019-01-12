@@ -182,6 +182,7 @@ public class PayJs {
         RequestBody body = RequestBody.create(MediaTypeJson, jsonString);
         Request request = new Request.Builder()
                 .url(url)
+                .addHeader("Content-Type", "application/json")
                 .post(body)
                 .build();
         Response response;
@@ -192,6 +193,14 @@ public class PayJs {
             throw new PayJsException("发送请求错误:" + e.getMessage());
         }
 
-        return JSON.parseObject(response.body().toString(), tClass);
+        String responseBody;
+        try {
+            responseBody = response.body().string();
+        } catch (IOException e) {
+            log.error("解析返回数据出错：{}", e);
+            throw new PayJsException("解析返回数据出错:" + e.getMessage());
+        }
+
+        return JSON.parseObject(responseBody, tClass);
     }
 }
