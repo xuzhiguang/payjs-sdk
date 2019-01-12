@@ -23,4 +23,17 @@ public class PayJsConstant {
 
     }
 
+    public static class OrderStatus {
+
+        /**
+         * 已支付
+         */
+        public static final int PAIED = 1;
+
+        /**
+         * 未支付
+         */
+        public static final int NOT_PAY = 0;
+    }
+
 }
