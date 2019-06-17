@@ -1,7 +1,8 @@
-package com.lumiere.payjs.sdk;
+package com.xuzhiguang.payjs.sdk;
 
 import com.lumiere.payjs.sdk.bean.*;
-import com.lumiere.payjs.sdk.exception.PayJsException;
+import com.xuzhiguang.payjs.sdk.exception.PayJsException;
+import com.xuzhiguang.payjs.sdk.bean.*;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 

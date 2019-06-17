@@ -1,4 +1,4 @@
-package com.lumiere.payjs.sdk.exception;
+package com.xuzhiguang.payjs.sdk.exception;
 
 /**
  * @author xuzhiguang

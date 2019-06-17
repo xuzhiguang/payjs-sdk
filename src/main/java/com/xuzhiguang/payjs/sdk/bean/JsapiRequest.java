@@ -1,4 +1,4 @@
-package com.lumiere.payjs.sdk.bean;
+package com.xuzhiguang.payjs.sdk.bean;
 
 import lombok.Data;
 

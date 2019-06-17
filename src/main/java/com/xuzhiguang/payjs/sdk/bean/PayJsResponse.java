@@ -1,6 +1,6 @@
-package com.lumiere.payjs.sdk.bean;
+package com.xuzhiguang.payjs.sdk.bean;
 
-import com.lumiere.payjs.sdk.constant.PayJsConstant;
+import com.xuzhiguang.payjs.sdk.constant.PayJsConstant;
 import lombok.Data;
 
 /**

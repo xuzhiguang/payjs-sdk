@@ -1,4 +1,4 @@
-package com.lumiere.payjs.sdk.bean;
+package com.xuzhiguang.payjs.sdk.bean;
 
 import lombok.Data;
 
@@ -7,7 +7,7 @@ import lombok.Data;
  * @date 2018/12/19
  */
 @Data
-public class CheckRequest {
+public class CloseRequest {
 
     /**
      * payjs平台订单号

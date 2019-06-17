@@ -1,4 +1,4 @@
-package com.lumiere.payjs.sdk.constant;
+package com.xuzhiguang.payjs.sdk.constant;
 
 /**
  * @author xuzhiguang

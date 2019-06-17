@@ -1,12 +1,13 @@
-package com.lumiere.payjs.sdk;
+package com.xuzhiguang.payjs.sdk;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.alibaba.fastjson.PropertyNamingStrategy;
 import com.alibaba.fastjson.serializer.SerializeConfig;
 import com.lumiere.payjs.sdk.bean.*;
-import com.lumiere.payjs.sdk.exception.PayJsException;
-import com.lumiere.payjs.sdk.util.SignUtil;
+import com.xuzhiguang.payjs.sdk.exception.PayJsException;
+import com.xuzhiguang.payjs.sdk.util.SignUtil;
+import com.xuzhiguang.payjs.sdk.bean.*;
 import lombok.extern.slf4j.Slf4j;
 import okhttp3.*;
 

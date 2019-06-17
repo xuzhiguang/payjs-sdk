@@ -1,4 +1,4 @@
-package com.lumiere.payjs.sdk.util;
+package com.xuzhiguang.payjs.sdk.util;
 
 import com.alibaba.fastjson.JSONObject;
 import com.alibaba.fastjson.PropertyNamingStrategy;
